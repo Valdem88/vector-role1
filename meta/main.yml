@@ -1,8 +1,8 @@
 galaxy_info:
-  role_name: clickhouse
+  role_name: vector
   namespace: alexeysetevoi
-  author: Alexey V. Bobrov
-  description: Role for installation and managing ClickHouse
+  author: Valdem88
+  description: Role for installation and managing Vector
 
   license: MIT
   
@@ -26,7 +26,7 @@ galaxy_info:
         - 8
 
   galaxy_tags:
-    - clickhouse
+    - vector
     - database
     - sql
 

@@ -1,6 +1,9 @@
 ---
-# handlers file for clickhouse
-- name: "Restart Clickhouse Service"
-  set_fact:
-    clickhouse_service_ensure: "restarted"
-  listen: 'restart-ch'
+# handlers file for vector-role
+# handlers для старта/рестарта сервиса Vector
+- name: Start Vector service
+  become: true
+  ansible.builtin.systemd:
+    name: vector
+    state: restarted
+  when: ansible_facts.virtualization_type != "docker"
